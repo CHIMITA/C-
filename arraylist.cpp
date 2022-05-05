@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int a, i, j;
-int arr[4][11] = {0, 0}; // 정수형 배열의 길이 지정 및 초기화 
+int a, i, j; //전역 변수로 선언 
 int t = 1;
 
+int arr[4][11] = {0, 0}; // 정수형 배열의 길이 지정 및 초기화 
+
+
 // 반환 값이 없는 void를 이용하여 함수 사용
-void arraylist(int i, int j)
+void arraylist()
 {
 	cout << endl;
 
@@ -44,7 +46,7 @@ int main() {
 		{
 			cout << endl;
 
-			arraylist(i, j); // 위에 선언한 함수 호출
+			arraylist(); // 위에 선언한 함수 호출
 
 			cout << "몇 열, 몇 번째 좌석을 예약하시겠습니까? : ";
 			cin >> i >> j;
@@ -54,7 +56,7 @@ int main() {
 			{
 				arr[i][j] = 1; // arr[i][j] 위치에 1로 초기화
 				cout << "예약되었습니다." << endl;
-				arraylist(i, j);
+				arraylist();
 				
 			}
 			else // arr[i][j] 위치에 값이 0 이 아니면 실행

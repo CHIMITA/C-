@@ -88,7 +88,7 @@ int main() {
 	Shape b(10, 20);
 	Shape c(3, 7, 4);
 
-	a.setTwo(3, 2);
+	a.setTwo(5, 1);
 	a.AreaOval();
 
 	b.AreaRect();

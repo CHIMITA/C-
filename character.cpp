@@ -59,7 +59,7 @@ public:
 	}
 
 	void copy() {
-
+		// 생성자 호출 오류로 함수 생성
 		Character ch;
 		Character copy_ch(ch);
 
@@ -87,12 +87,13 @@ public:
 	}
 
 	void edit() {
-		cout << "수정하고 싶은 캐릭터를 선택하세요~" << endl;
-		cin >> num;
+		cout << "수정하고 싶은 캐릭터를 선택하세요~ (1 or 2) : " << endl;
+		cin >> edit_num;
 
-		cout << "수정 할 이름, 나이, 직업을 순서대로 입력해주세요. (공백으로 구분)" << endl;
+		cout << "\n수정 할 이름, 나이, 직업을 순서대로 입력해주세요. (공백으로 구분)" << endl;
 		cout << "-->";
-		cin >> name[num - 1] >> age[num - 1] >> job[num - 1];
+		cin >> name[edit_num - 1] >> age[edit_num - 1] >> job[edit_num - 1]; 
+		//name[num]은 0에서 시작하기 때문에 원하는 값으로 맞추기 위해선 -1이 필요
 
 		cout << "캐릭터가 정상적으로 수정되었습니다." << endl;
 	}

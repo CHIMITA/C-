@@ -4,7 +4,7 @@
 using namespace std;
 
 int num;
-int status = 0; //·Î±×ÀÎ »óÅÂ º¯¼ö 0 : ·Î±×¾Æ¿ô 1: ·Î±×ÀÎ
+int status = 0; //ë¡œê·¸ì¸ ìƒíƒœ ë³€ìˆ˜ 0 : ë¡œê·¸ì•„ì›ƒ 1: ë¡œê·¸ì¸
 
 char name[20];
 char id[20];
@@ -13,7 +13,7 @@ char pwd[30];
 char id_add[20];
 char pwd_add[30];
 
-const char* id_login = id_add; //»ó¼ö·Î °ª °íÁ¤
+const char* id_login = id_add; //ìƒìˆ˜ë¡œ ê°’ ê³ ì •
 const char* pwd_login = pwd_add;
 
 
@@ -22,13 +22,13 @@ const char* pwd_login = pwd_add;
 class Member {
 public:
 
-    int start() { //½ÃÀÛ ºÎºĞ
+    int start() { //ì‹œì‘ ë¶€ë¶„
 
-        cout << "\n--------¼­¿ï¿©´ë Á¾ÇÕÁ¤º¸½Ã½ºÅÛ--------" << endl;
-        cout << "1. È¸¿ø°¡ÀÔ" << endl;
-        cout << "2. ·Î±×ÀÎ" << endl;
+        cout << "\n--------ì„œìš¸ì—¬ëŒ€ ì¢…í•©ì •ë³´ì‹œìŠ¤í…œ--------" << endl;
+        cout << "1. íšŒì›ê°€ì…" << endl;
+        cout << "2. ë¡œê·¸ì¸" << endl;
 
-        cout << "\n¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä >> ";
+        cout << "\në²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” >> ";
         cin >> num;
         cout << "----------------------------------------" << endl;
 
@@ -36,17 +36,17 @@ public:
     }
 
     void setName() {
-        cout << "\nÀÌ¸§ : ";
+        cout << "\nì´ë¦„ : ";
         cin >> name;
     }
 
     void setId() {
-        cout << "¾ÆÀÌµğ : ";
+        cout << "ì•„ì´ë”” : ";
         cin >> id_add; 
     }
 
     void setPassword() {
-        cout << "ºñ¹Ğ¹øÈ£ : ";
+        cout << "ë¹„ë°€ë²ˆí˜¸ : ";
         cin >> pwd_add;
     }
 
@@ -68,27 +68,27 @@ public:
         setId();
         setPassword();
 
-        cout << "\n=== È¸¿ø°¡ÀÔ ¼º°ø ===" << endl;
+        cout << "\n=== íšŒì›ê°€ì… ì„±ê³µ ===" << endl;
     }
 
     void login() { 
         
-        cout << "\n¾ÆÀÌµğ : ";
+        cout << "\nì•„ì´ë”” : ";
         cin >> id;
 
-        cout << "ºñ¹Ğ¹øÈ£ : ";
+        cout << "ë¹„ë°€ë²ˆí˜¸ : ";
         cin >> pwd;
 
 
-        if (strcmp(id, id_login) == 0 && strcmp(pwd, pwd_login) == 0) { //¹®ÀÚ¿­ °°Àº Áö È®ÀÎ
+        if (strcmp(id, id_login) == 0 && strcmp(pwd, pwd_login) == 0) { //ë¬¸ìì—´ ê°™ì€ ì§€ í™•ì¸
             status = 1;
-            cout << "\n=== ·Î±×ÀÎ ¼º°ø ===\n" << endl;
-            cout << getName() << "´Ô È¯¿µÇÕ´Ï´Ù." << endl;
+            cout << "\n=== ë¡œê·¸ì¸ ì„±ê³µ ===\n" << endl;
+            cout << getName() << "ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤." << endl;
             
         }
         else {
             status = 0;
-            cout << "¾ÆÀÌµğ È¤Àº ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù." << endl;
+            cout << "ì•„ì´ë”” í˜¹ì€ ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤." << endl;
         }
 
     }
@@ -101,7 +101,7 @@ public:
             login();
         }
         else {
-            cout << "1 ¶Ç´Â 2¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä" << endl;
+            cout << "1 ë˜ëŠ” 2ë§Œ ì…ë ¥í•´ì£¼ì„¸ìš”" << endl;
         }
     }
 
@@ -114,19 +114,19 @@ public:
     int myclassNum;
 
     string class_num;
-    string class_list[3] = { "c++ ÇÁ·Î±×·¡¹Ö", "linux ÇÁ·Î±×·¡¹Ö", "¸®¹ö½Ì" };
+    string class_list[3] = { "c++ í”„ë¡œê·¸ë˜ë°", "linux í”„ë¡œê·¸ë˜ë°", "ë¦¬ë²„ì‹±" };
     string class_numlist[3] = { "0001", "0002", "0003" };
 
     string *myClass = new string[3];
 
     int mainStart() {
         cout << "====================" << endl;
-        cout << "1. Àå¹Ù±¸´Ï" << endl;
-        cout << "2. °­ÀÇ ´ã±â" << endl;
-        cout << "3. ¼ö°­½ÅÃ» È®ÀÎ" << endl;
-        cout << "4. ·Î±×¾Æ¿ô" << endl;
+        cout << "1. ì¥ë°”êµ¬ë‹ˆ" << endl;
+        cout << "2. ê°•ì˜ ë‹´ê¸°" << endl;
+        cout << "3. ìˆ˜ê°•ì‹ ì²­ í™•ì¸" << endl;
+        cout << "4. ë¡œê·¸ì•„ì›ƒ" << endl;
 
-        cout << "¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ";
+        cout << "ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ";
         cin >> num;
 
         return num;
@@ -135,8 +135,8 @@ public:
 
 
     void print() {
-        //¹è¿­·Î °­ÀÇ ¸ñ·Ï Ãâ·Â
-        cout << "============°­ÀÇ¸ñ·Ï==============" << endl;
+        //ë°°ì—´ë¡œ ê°•ì˜ ëª©ë¡ ì¶œë ¥
+        cout << "============ê°•ì˜ëª©ë¡==============" << endl;
         cout << "[1] " << class_list[0] << " >> " << class_numlist[0] << endl;
         cout << "[2] " << class_list[1] << " >> " << class_numlist[1] << endl;
         cout << "[3] " << class_list[2] << " >> " << class_numlist[2] << endl;
@@ -148,12 +148,12 @@ public:
     }
     */
 
-    //2. °­ÀÇ ´ã±â
+    //2. ê°•ì˜ ë‹´ê¸°
     void bag_course() {
-        cout << "\nÃß°¡ÇÒ ÇĞ¼ö ¹øÈ£ >> ";
+        cout << "\nì¶”ê°€í•  í•™ìˆ˜ ë²ˆí˜¸ >> ";
         cin >> class_num;
 
-        if (class_num.compare(class_numlist[0]) == 0) { //ÀÔ·ÂÇÑ ÇĞ¼ö¹øÈ£°¡ ÀúÀåµÈ ÇĞ¼ö¹øÈ£¿Í °°À» ¶§
+        if (class_num.compare(class_numlist[0]) == 0) { //ì…ë ¥í•œ í•™ìˆ˜ë²ˆí˜¸ê°€ ì €ì¥ëœ í•™ìˆ˜ë²ˆí˜¸ì™€ ê°™ì„ ë•Œ
             myclassNum = 0;
 
         }
@@ -168,20 +168,20 @@ public:
         // 0 , 0  1, 
         for (int i = 0; i < 3; i++)
         {
-            if (&myClass[i] != &class_list[myclassNum])// ÀÔ·ÂÇÑ ÇĞ¼ö ¹øÈ£°¡ ¹Ì¸® ÀúÀåµÈ ÇĞ¼ö¹øÈ£¿¡ ¾øÀ» ¶§
+            if (&myClass[i] != &class_list[myclassNum])// ì…ë ¥í•œ í•™ìˆ˜ ë²ˆí˜¸ê°€ ë¯¸ë¦¬ ì €ì¥ëœ í•™ìˆ˜ë²ˆí˜¸ì— ì—†ì„ ë•Œ
             {
                 if (&myClass[myclassNum] != &class_list[i])
                 {
-                    myClass[i] = class_list[myclassNum]; //myClass¿¡ class_list[i] ÀúÀå
+                    myClass[i] = class_list[myclassNum]; //myClassì— class_list[i] ì €ì¥
                     i++;
                     break;
                 }
                 
             }
-            if (&myClass[i] == &class_list[myclassNum]) { //ÀúÀåµÈ °ú¸ñ¸í°ú ÀÔ·Â¹ŞÀº °ú¸ñ ºñ±³
+            if (&myClass[i] == &class_list[myclassNum]) { //ì €ì¥ëœ ê³¼ëª©ëª…ê³¼ ì…ë ¥ë°›ì€ ê³¼ëª© ë¹„êµ
                 if (&myClass[i] == &class_list[i])
                 {
-                    cout << "ÀÌ¹Ì My Àå¹Ù±¸´Ï¿¡ ´ã°ÜÁ® ÀÖ½À´Ï´Ù." << endl;
+                    cout << "ì´ë¯¸ My ì¥ë°”êµ¬ë‹ˆì— ë‹´ê²¨ì ¸ ìˆìŠµë‹ˆë‹¤." << endl;
                 } 
             }
             else {
@@ -193,9 +193,9 @@ public:
        
     }
 
-    //3. ¼ö°­½ÅÃ» È®ÀÎ
+    //3. ìˆ˜ê°•ì‹ ì²­ í™•ì¸
     void put_bag() {
-        cout << "==========My Àå¹Ù±¸´Ï==========" << endl;
+        cout << "==========My ì¥ë°”êµ¬ë‹ˆ==========" << endl;
 
         cout << "1. " << myClass[0] << endl;
         cout << "2. " << myClass[1] << endl;
@@ -203,9 +203,9 @@ public:
 
     }
 
-    //4. ·Î±×¾Æ¿ô 
+    //4. ë¡œê·¸ì•„ì›ƒ 
     void logout() {
-        cout << "·Î±×¾Æ¿ô µÇ¾ú½À´Ï´Ù. ¾È³çÈ÷ °¡¼¼¿ä." << endl;
+        cout << "ë¡œê·¸ì•„ì›ƒ ë˜ì—ˆìŠµë‹ˆë‹¤. ì•ˆë…•íˆ ê°€ì„¸ìš”." << endl;
         status = 0;
     }
 
@@ -226,7 +226,7 @@ public:
             exit;
         }
         else {
-            cout << "¹üÀ§ ³»¿¡¼­ ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+            cout << "ë²”ìœ„ ë‚´ì—ì„œ ì…ë ¥í•˜ì„¸ìš”." << endl;
         }
     }
 };

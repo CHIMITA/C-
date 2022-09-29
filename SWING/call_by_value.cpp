@@ -16,14 +16,14 @@ int main()
 	int a = 10;
 	int b = 20;
 
-	cout << "±âº» °ª ----" << endl;
+	cout << "Â±Ã¢ÂºÂ» Â°Âª ----" << endl;
 
 	cout << "a : " << a << endl;
 	cout << "b : " << b << endl;
 
 	swap(a, b);
 
-	cout << "º¯°æµÈ °ª ----" << endl;
+	cout << "ÂºÂ¯Â°Ã¦ÂµÃˆ Â°Âª ----" << endl;
 	cout << "a : " << a << endl;
 	cout << "b : " << b << endl;
 }
